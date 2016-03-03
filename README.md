@@ -38,3 +38,10 @@ Use the following names when templating:
 * title - CharBlock
 * text - TextBlock
 * link - PageChooserBlock
+
+Notes
+-----
+
+You can also add a CardsBlock inside of a StructBlock or other structual block types for more control. You may want to inject more custom CSS to make it span the full width if you aren't using help text, or change the number of columns.
+
+If [wagtailfontawesome](https://github.com/alexgleason/wagtailfontawesome) is installed, this app will detect it and use [fa-clone](http://fontawesome.io/icon/clone/) by default.
