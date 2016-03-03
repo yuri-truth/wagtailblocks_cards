@@ -12,7 +12,7 @@ Run:
 
     pip install wagtailblocks-cards
 
-Then add `wagtailblocks-cards` to your installed apps.
+Then add `wagtailblocks_cards` to your installed apps.
 
 Usage
 -----

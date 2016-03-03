@@ -1,5 +1,4 @@
 node_modules/
-wagtailblocks_cards/static/
 wagtailblocks_cards.egg-info/
 dist/
 build/
