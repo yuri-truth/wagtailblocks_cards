@@ -32,4 +32,9 @@ Finally, template the block as usual.
 Fields
 ------
 
-*
+Use the following names when templating:
+
+* image - ImageChooserBlock
+* title - CharBlock
+* text - TextBlock
+* link - PageChooserBlock
