@@ -5,7 +5,7 @@ from wagtail.wagtailcore import hooks
 
 
 @hooks.register('insert_editor_css')
-def allow_font_awesome_icons():
+def cards_block_styles():
     return format_html(
         '<link rel="stylesheet" href="'
         + settings.STATIC_URL
