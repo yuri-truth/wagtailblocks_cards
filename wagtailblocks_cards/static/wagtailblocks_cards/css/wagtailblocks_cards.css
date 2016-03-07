@@ -31,6 +31,10 @@
   width: 100%;
 }
 
+.sequence-type-cards .sequence-member .struct-block .fields {
+  width: 100%;
+}
+
 .struct-block .sequence-type-cards {
   width: 100% !important;
 }
