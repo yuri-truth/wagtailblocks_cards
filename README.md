@@ -17,27 +17,20 @@ Then add `wagtailblocks_cards` to your installed apps.
 Usage
 -----
 
-Include the block wherever relevant and add it to any StreamField.
+A CardsBlock is just a ListBlock with extra styling on the editor screen. Use it the exact same way as a ListBlock.
 
     from wagtailblocks_cards.blocks import CardsBlock
 
 Then:
 
     body = StreamField([
-      ('cards', CardsBlock())
+      ('cards', CardsBlock(MyCustomBlock()))
     ])
 
-Finally, template the block as usual.
+Replace `MyCustomBlock()` with a custom block of your choice.
 
-Fields
-------
+Finally, template as usual.
 
-Use the following names when templating:
-
-* image - ImageChooserBlock
-* title - CharBlock
-* text - TextBlock
-* link - PageChooserBlock
 
 Notes
 -----

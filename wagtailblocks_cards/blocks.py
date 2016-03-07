@@ -1,29 +1,20 @@
+from django import forms
 from django.conf import settings
 from django.template.loader import render_to_string
-from wagtail.wagtailcore.blocks import (
-    ListBlock,
-    StructBlock,
-    CharBlock,
-    TextBlock,
-    PageChooserBlock
-)
-from wagtail.wagtailimages.blocks import ImageChooserBlock
+from django.contrib.staticfiles.templatetags.staticfiles import static
 
-
-class CardBlock(StructBlock):
-    image = ImageChooserBlock(required=False)
-    title = CharBlock()
-    text = TextBlock()
-    link = PageChooserBlock(required=False)
-
-    class Meta:
-        form_classname = 'card-block'
+from wagtail.wagtailcore.blocks import ListBlock
 
 
 class CardsBlock(ListBlock):
-    def __init__(self, **kwargs):
-        child_block = CardBlock()
-        super(CardsBlock, self).__init__(child_block, **kwargs)
+    @property
+    def media(self):
+        parent_media = super(CardsBlock, self).media
+        cards_css = {
+            'screen': (static('wagtailblocks_cards/css/wagtailblocks_cards.css'),)
+        }
+        cards_media = forms.Media(css=cards_css)
+        return parent_media + cards_media
 
     def render_form(self, value, prefix='', errors=None):
         if errors:
