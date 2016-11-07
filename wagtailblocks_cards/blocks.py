@@ -1,5 +1,5 @@
 from django import forms
-from django.conf import settings
+from django.apps import apps
 from django.template.loader import render_to_string
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
@@ -37,5 +37,5 @@ class CardsBlock(ListBlock):
         })
 
     class Meta:
-        if 'wagtailfontawesome' in settings.INSTALLED_APPS:
+        if apps.is_installed('wagtailfontawesome'):
             icon = 'fa-clone'
