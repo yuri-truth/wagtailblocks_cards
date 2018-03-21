@@ -3,7 +3,10 @@ from django.apps import apps
 from django.template.loader import render_to_string
 from django.contrib.staticfiles.templatetags.staticfiles import static
 
-from wagtail.wagtailcore.blocks import ListBlock
+try:
+    from wagtail.core.blocks import ListBlock
+except ImportError:  # fallback for Wagtail <2.0
+    from wagtail.wagtailcore.blocks import ListBlock
 
 
 class CardsBlock(ListBlock):
