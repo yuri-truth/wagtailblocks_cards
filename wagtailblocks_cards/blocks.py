@@ -1,7 +1,7 @@
 from django import forms
 from django.apps import apps
 from django.template.loader import render_to_string
-from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.templatetags.static import static
 
 try:
     from wagtail.core.blocks import ListBlock

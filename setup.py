@@ -32,6 +32,6 @@ setup(
     include_package_data=True,
     install_requires=[
         "wagtail>=0.8.7",
-        "Django>=1.7.1",
+        "Django>=3.0",
     ],
 )
